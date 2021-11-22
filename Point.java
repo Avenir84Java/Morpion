@@ -7,7 +7,6 @@
  *
  * @version 1.0
  */
- 
 /**
  * Classe Point : Représentation des coordonnées et de la valeur d'un point dans la grille de morpion
  */
