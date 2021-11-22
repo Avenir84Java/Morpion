@@ -3,6 +3,8 @@ import java.util.Arrays;
 import java.util.Random;
 import java.lang.Math;
 
+
+
 public class Grille {
 	private final int DIMENSION_DEFAUT = 3;
 		
