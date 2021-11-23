@@ -10,6 +10,7 @@
 /**
  * Classe Point : Représentation des coordonnées et de la valeur d'un point dans la grille de morpion
  */
+ 
 public class Point {
 
 	//Déclaration des variables
