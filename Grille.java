@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 import java.lang.Math;
-
+MODIF PHILIPPE
 public class Grille {
 	private final int DIMENSION_DEFAUT = 3;
 	private int DIMENSION_CUSTOM = -1;
