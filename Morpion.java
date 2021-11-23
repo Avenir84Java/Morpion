@@ -5,7 +5,7 @@
  * <a href="mailto:philippe.kurz@javenir84.org">philippe.kurz@javenir84.org</a>
  *
  *
- * @version 1.0
+ * @version 1.0.0.0.0.1
  */
 import java.util.Scanner;
 
