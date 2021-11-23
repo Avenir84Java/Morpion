@@ -10,7 +10,6 @@
 import java.util.Scanner;
 
 
-
 /**
  * Classe Morpion : représente le jeu du morpion
  */
@@ -53,15 +52,21 @@ public class Morpion {
 		else
 			grille = new Grille(dimension);
 		
+
 		grille.remplir();
 		
 		System.out.println(grille.toString());
 		grille.verif();		
+
+		//grille.remplir();
+		
+
 		run();		
 	}
 	
 	private void run() {
 		notifier("Démarrage du jeu");
+
 		// while (true) {
 			
 			// Point p = validateCoordinatesAndCreatePoint(grille);
@@ -127,6 +132,20 @@ public class Morpion {
 		
 		// return makeYourChoisePlayer;
 	// }	
+
+		while (true) {
+			
+			//Point p = validateCoordinatesAndCreatePoint(grille);
+			//grille.getGrille()[p.getCoordX()+(p.getCoordY()*grille.getDimension())]=p;
+			grille.validateCoordinatesAndCreatePoint();
+			System.out.println(grille.toString());
+			grille.verif();		
+			
+		}
+	}
+	
+	
+
 	
 	
 	
@@ -147,7 +166,9 @@ public class Morpion {
 	public static void main(String[] args) {
 		int dim = 0;
 		
+
 		// Analyse des arguments
+
 		// Recherche d'un argument -debug
 		for(int i = 0; i < args.length ; i++) {
 			
@@ -164,9 +185,13 @@ public class Morpion {
 			}
 		}
 			
+
 		// Construit un objet avec ou sans paramètre
 		if (dim == 0 ) new Morpion(); else new Morpion(dim);
 	}
 	
-	
+
+		if (dim == 0 ) new Morpion(); else new Morpion(dim);
+	}
+
 }
