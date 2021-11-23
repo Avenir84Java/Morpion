@@ -47,43 +47,6 @@ public class Grille {
 	*/
 	public String verif(){
 
-		String okGagne = "";
-		int dimension = (int)Math.sqrt(grille.length);
-		
-		for (int i = 0; i<dimension; i++) {
-			if (okGagne == "stop"){
-				break;
-			}
-			System.out.println();
-			
-			for (int j = i * dimension; j< (i+1)*dimension;j++){
-				if ( j != i * dimension){
-					String premier = grille[j].getValue();
-					String second = grille[j-1].getValue(); 
-					
-					//System.out.println(premier + " " + second + " " + (premier != second));
-					if (premier != second){
-					   break; 
-					}
-					if (j == (i+1)*dimension-1){
-						
-						System.out.println("Gagné !!!");
-						okGagne = "stop";
-						
-						break;
-					}
-				
-			    }
-				
-				//System.out.println(grille[j]);				
-			}			
-		} 
-		
-		
-		return " c'est bon ";
-	}
-
-
 		int dimension = this.getDimension();
 		for (int i = 0; i<dimension; i++) {
 
@@ -226,8 +189,6 @@ public class Grille {
 		// Corps du tableau
 		for(int j = 0; j < dimension; j++) {
 			for (int i = 0; i < dimension; i++)
-
-				sb.append((i == 0 ? "│ " : " │ ") + grille[(j * dimension) + i].getValue() + ((i < dimension-1) ? "" : " │" + System.lineSeparator()));
 
 				sb.append((i == 0 ? "│ " : " │ ") + (null==grille[(j * dimension) + i]?" ":grille[(j * dimension) + i].getValue()) + ((i < dimension-1) ? "" : " │" + System.lineSeparator()));
 
