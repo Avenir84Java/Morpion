@@ -4,7 +4,7 @@ import java.util.Random;
 import java.util.Scanner;
 import java.lang.Math;
 
-
+// samia's comments
 
 public class Grille {
 	private final int DIMENSION_DEFAUT = 3;
