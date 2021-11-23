@@ -297,6 +297,6 @@ public class Grille {
 		
 		return makeYourChoisePlayer;
 	}
-// c'est l'heure!!!
+// 
 
 }
