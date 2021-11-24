@@ -56,7 +56,7 @@ public class Grille {
 			if (debug)
 				System.out.println();
 			
-			//verif ligne
+			// verif ligne
 			for (int j = i * dimension; j< (i+1)*dimension;j++){
 				if ( j != i * dimension){
 					String car1 = new String((grille[j]==null?Integer.toString(j):grille[j].getValue()));
@@ -125,17 +125,18 @@ public class Grille {
 				
 				if (j == (dimension*dimension)-1){
 				
-				if (car1.equals("X")){
-							return "X";
-						}
-						else if (car1.equals("O")) {
-							return "O";
-						}		
+					if (car1.equals("X")){
+						return "X";
+					}
+					else if (car1.equals("O")) {
+						return "O";
+					}		
 				}
 				
 			}
 		
 		}
+		
 		
 		// verif diagonale 2
 		for (int j=dimension-1; j<((dimension-1)*dimension)+1;j+=(dimension-1)) {
@@ -146,12 +147,12 @@ public class Grille {
 				
 				if (j == (dimension*dimension)-dimension){
 				
-				if (!car1.equals("X")){
-							return "X";
-						}
-						else if (car1.equals("O")) {
-							return "O";
-						}
+					if (car1.equals("X")){
+						return "X";
+					}
+					else if (car1.equals("O")) {
+						return "O";
+					}
 				}
 			}
 		

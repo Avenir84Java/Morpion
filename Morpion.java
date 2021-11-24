@@ -68,6 +68,7 @@ public class Morpion {
 		notifier("Démarrage du jeu");
 	
 		String resultat;
+		System.out.println("Test");
 		while ((resultat = grille.verif()) == null) {
 			
 			//Point p = validateCoordinatesAndCreatePoint(grille);
