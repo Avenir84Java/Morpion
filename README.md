@@ -8,7 +8,6 @@ Si vous avez un souci avec les caractères spéciales français, compilez le cod
 
 Si vous souhaitez utiliser notre code, n'hésitez pas ! Tout est explicitement dans le domaine public (on doit le dire formellement). Vous pouvez récupérer une copie des fichiers à utiliser et les modifier comme il vous convient le mieux.
 
-
 Amusez-vous.
 
 
