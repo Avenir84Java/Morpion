@@ -4,11 +4,8 @@ import java.util.Random;
 import java.util.Scanner;
 import java.lang.Math;
 
-<<<<<<< HEAD
+// SAMIA AGAIN !
 
-
-=======
->>>>>>> a2f19821cf01bc080372f7922ad08f8c9400e65f
 public class Grille {
 	private final int DIMENSION_DEFAUT = 3;
 	private int DIMENSION_CUSTOM = -1;
@@ -53,8 +50,8 @@ public class Grille {
 		for (int i = 0; i<dimension; i++) {
 
 			System.out.println();
-			/*
-			// verif ligne
+			
+			//verif ligne
 			for (int j = i * dimension; j< (i+1)*dimension;j++){
 				if ( j != i * dimension){
 					String car1 = new String((grille[j]==null?Integer.toString(j):grille[j].getValue()));
@@ -68,18 +65,18 @@ public class Grille {
 						
 						if (car1.equals("X")){
 							
-							return "X";
+							return "X GAGNANT";
 						}
 						else if (car1.equals("O")) {
 							
-							return "O";
+							return "O GAGNANT";
 						}
 						
 						return null;
 					}  
 				}
 			}
-			*/
+			
 			// verif colonne
 
 			for (int j = i ; j< dimension*dimension;j+=dimension) {
@@ -108,8 +105,8 @@ public class Grille {
 			}
 					
 		}
-/*		
-		// verif diagonale
+
+		verif diagonale
 		for (int j=0; j<dimension*dimension;j+=(dimension+1)) {
 			if (j!=0) {
 				
@@ -146,10 +143,10 @@ public class Grille {
 						}
 				}
 			}
-				
+		
 		}
 		
-*/		return null;
+		return null;
 
 	}
 

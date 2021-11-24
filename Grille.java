@@ -51,7 +51,7 @@ public class Grille {
 
 			System.out.println();
 			
-			// verif ligne
+			//verif ligne
 			for (int j = i * dimension; j< (i+1)*dimension;j++){
 				if ( j != i * dimension){
 					String car1 = new String((grille[j]==null?Integer.toString(j):grille[j].getValue()));
@@ -65,11 +65,11 @@ public class Grille {
 						
 						if (car1.equals("X")){
 							
-							return "X";
+							return "X GAGNANT";
 						}
 						else if (car1.equals("O")) {
 							
-							return "O";
+							return "O GAGNANT";
 						}
 						
 						return null;
@@ -105,8 +105,8 @@ public class Grille {
 			}
 					
 		}
-		
-		// verif diagonale
+
+		//verif diagonale
 		for (int j=0; j<dimension*dimension;j+=(dimension+1)) {
 			if (j!=0) {
 				
@@ -143,7 +143,7 @@ public class Grille {
 						}
 				}
 			}
-				
+		
 		}
 		
 		return null;
