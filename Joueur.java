@@ -5,6 +5,8 @@
 	
 	public Joueur(char symbole) {
 		this.symbole = symbole;
+		/* Ajouter le code pour demander et enregistrer le nom */
+		
 		
 	}
 
