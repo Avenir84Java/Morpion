@@ -4,7 +4,7 @@ import java.util.Random;
 import java.util.Scanner;
 import java.lang.Math;
 
-// SAMIA AGAIN !
+// SAMIA AGAIN !!
 
 public class Grille {
 	private final int DIMENSION_DEFAUT = 3;
@@ -173,8 +173,6 @@ public class Grille {
 		}
 	}
 
-
-
 	/**
 	* Fonction qui retourne une chaîne de caractères affichant la grille 
 	* @return 	La chaîne représentant la grille
@@ -250,7 +248,6 @@ public class Grille {
 		System.out.println(makeYourChoise());
 		
 		Scanner scanner = new Scanner(System.in);
-		
 		
 
 		while (scannerIsInteger == false) {
