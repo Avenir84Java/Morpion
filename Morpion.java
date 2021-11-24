@@ -74,7 +74,8 @@ public class Morpion {
 			//grille.getGrille()[p.getCoordX()+(p.getCoordY()*grille.getDimension())]=p;
 			grille.validateCoordinatesAndCreatePoint();
 			System.out.println(grille.toString());
-			System.out.println(resultat);		
+			if (debug)
+				System.out.println(resultat);		
 			
 		}
 		System.out.println(grille.verif());
