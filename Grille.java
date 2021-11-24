@@ -4,6 +4,8 @@ import java.util.Random;
 import java.util.Scanner;
 import java.lang.Math;
 
+// SAMIA AGAIN !
+
 public class Grille {
 	private final int DIMENSION_DEFAUT = 3;
 	private int DIMENSION_CUSTOM = -1;
@@ -48,7 +50,7 @@ public class Grille {
 		for (int i = 0; i<dimension; i++) {
 
 			System.out.println();
-			/*
+			
 			// verif ligne
 			for (int j = i * dimension; j< (i+1)*dimension;j++){
 				if ( j != i * dimension){
@@ -74,7 +76,7 @@ public class Grille {
 					}  
 				}
 			}
-			*/
+			
 			// verif colonne
 
 			for (int j = i ; j< dimension*dimension;j+=dimension) {
@@ -103,7 +105,7 @@ public class Grille {
 			}
 					
 		}
-/*		
+		
 		// verif diagonale
 		for (int j=0; j<dimension*dimension;j+=(dimension+1)) {
 			if (j!=0) {
@@ -144,7 +146,7 @@ public class Grille {
 				
 		}
 		
-*/		return null;
+		return null;
 
 	}
 
