@@ -9,7 +9,6 @@
  */
 import java.util.Scanner;
 
-
 /**
  * Classe Morpion : représente le jeu du morpion
  */
@@ -20,6 +19,7 @@ public class Morpion {
 	*/
 	public static boolean debug;
 	
+	private static boolean autofill = false;
 	/**
 	* La grille de jeu
 	*/
@@ -50,18 +50,15 @@ public class Morpion {
 		if(dimension == 0)
 			grille = new Grille();
 		else
-			grille = new Grille(dimension);
+			grille = new Grille(dimension);		
 		
-
-		//grille.remplir();
-		
-		//System.out.println(grille.toString());
-		//grille.verif();		
-
-		//grille.remplir();
-		
-
-		run();		
+		if (autofill) {
+			grille.remplir();
+			System.out.println(grille.toString());
+			System.out.println(grille.verif());
+		}
+		else
+			run();		
 	}
 	
 	private void run() {
@@ -92,7 +89,7 @@ public class Morpion {
 	* Fonction d'affichage d'un message dans la console. Le message ne s'affiche que si ma variable debug est à true
 	* @param message	Le message à afficher
 	*/
-	private static void notifier(String message) {
+	public static void notifier(String message) {
 		if(debug)
 			 System.out.println(message);
 	}
@@ -112,7 +109,10 @@ public class Morpion {
 		for(int i = 0; i < args.length ; i++) {
 			
 			if (args[i].equals("-debug")) 
-				debug = true;
+				debug = true;			
+			else if (args[i].equals("-autofill")) 
+				autofill = true;
+
 			else {
 				try {
 					dim = Integer.parseInt(args[i].substring(1));

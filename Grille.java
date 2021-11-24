@@ -4,19 +4,10 @@ import java.util.Random;
 import java.util.Scanner;
 import java.lang.Math;
 
-// SAMIA AGAIN !!
-
 public class Grille {
 	private final int DIMENSION_DEFAUT = 3;
 	private int DIMENSION_CUSTOM = -1;
 	private boolean XTurn = true;
-	private boolean debug =false;
-	
-	/** Version avec un tableau de Point
-	* private Point[] grille = {new Point(0,0,"X"), new Point(1,0,"O"), new Point(2,0,"O"),
-	*						    new Point(0,1,"X"), new Point(1,1,"X"), new Point(2,1,"O"),
-	*						    new Point(0,2,"X"), new Point(1,2,"O"), new Point(2,2,"X")};
-	*/
 	
 	private Point[] grille;					  
 	
@@ -29,8 +20,7 @@ public class Grille {
   
   
 	public Grille(){
-		_grille(DIMENSION_DEFAUT);
-		
+		_grille(DIMENSION_DEFAUT);	
 	}
   
 	public Grille(int dimension){
@@ -38,9 +28,7 @@ public class Grille {
 	} 
 
 	private void _grille(int dimension) {
-		debug = Morpion.debug;
-		if (debug)
-			System.out.println("constructeur grille");
+		Morpion.notifier("constructeur grille");
 		grille = new Point[(int)Math.pow(dimension,2)];					  
 	}
 
@@ -52,11 +40,8 @@ public class Grille {
 
 		int dimension = this.getDimension();
 		for (int i = 0; i<dimension; i++) {
-
-			if (debug)
-				System.out.println();
 			
-			// verif ligne
+			// verif lignes
 			for (int j = i * dimension; j< (i+1)*dimension;j++){
 				if ( j != i * dimension){
 					String car1 = new String((grille[j]==null?Integer.toString(j):grille[j].getValue()));
@@ -68,12 +53,10 @@ public class Grille {
 					
 					if (j == (i+1)*dimension-1){
 						
-						if (car1.equals("X")){
-							
+						if (car1.equals("X")){	
 							return "X GAGNANT";
 						}
 						else if (car1.equals("O")) {
-							
 							return "O GAGNANT";
 						}
 						
@@ -82,22 +65,22 @@ public class Grille {
 				}
 			}
 			
-			// verif colonne
-
+			// verif colonnes
 			for (int j = i ; j< dimension*dimension;j+=dimension) {
-				if (debug)
-					System.out.println("i:" + i + " j:" + j);
+				Morpion.notifier("i:" + i + " j:" + j);
+
 				if ( j != i){	
 					
-					 String car1 = new String((grille[j]==null?Integer.toString(j):grille[j].getValue()));	
-					 String car2 = new String((grille[j-dimension]==null?Integer.toString(j-dimension):grille[j-dimension].getValue())); 
-					if (debug)
-						System.out.println(car1 + " " + car2);
-					 if (!car1.equals(car2)){
-					    break; 
-					 }
+					String car1 = new String((grille[j]==null?Integer.toString(j):grille[j].getValue()));	
+					String car2 = new String((grille[j-dimension]==null?Integer.toString(j-dimension):grille[j-dimension].getValue())); 
+					
+					Morpion.notifier(car1 + " " + car2);
 
-					 if (j == dimension*dimension + (i-dimension)){ 
+					if (!car1.equals(car2)){
+					    break; 
+					}
+
+					if (j == dimension*dimension + (i-dimension)){ 
 						
 						if (car1.equals("X")){
 							return "X";
@@ -106,7 +89,7 @@ public class Grille {
 							return "O";
 						}
 						
-						 return null;
+						return null;
 					}  
 				}
 			}
@@ -116,7 +99,6 @@ public class Grille {
 
 		
 		// verif diagonale 1
-
 		for (int j=0; j<dimension*dimension;j+=(dimension+1)) {
 			if (j!=0) {
 				
@@ -131,10 +113,8 @@ public class Grille {
 					else if (car1.equals("O")) {
 						return "O";
 					}		
-				}
-				
-			}
-		
+				}				
+			}		
 		}
 		
 		
@@ -154,8 +134,7 @@ public class Grille {
 						return "O";
 					}
 				}
-			}
-		
+			}		
 		}
 		
 		return null;
@@ -177,11 +156,11 @@ public class Grille {
 			int j;
 			do {			
 				j = new Random().nextInt(nombreDeCases);
-				//System.out.print("Dans la boucle " + j);
+				//Morpion.notifier("Dans la boucle " + j);
 			} while ( grille[j] != null ); // Tant que j ne désigne pas une case vide
 			
 			grille[j] = new Point(0,0,	(((i + start) % 2) == 0 ? "X": "O"));	
-			//System.out.println(grille[j].toString());
+			//Morpion.notifier(grille[j].toString());
 		}
 	}
 
@@ -218,7 +197,6 @@ public class Grille {
 		
 	}
 
-	
 	public int getDimension() {
 		if (this.DIMENSION_CUSTOM != -1) {
 			return this.DIMENSION_CUSTOM;
@@ -261,7 +239,6 @@ public class Grille {
 		
 		Scanner scanner = new Scanner(System.in);
 		
-
 		while (scannerIsInteger == false) {
 			System.out.print("X coordinate (horizontal, zero-based, left -> right) : ");
 			String input1 = scanner.nextLine();
