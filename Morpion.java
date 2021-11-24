@@ -25,6 +25,13 @@ public class Morpion {
 	*/
 	private Grille grille;
 	
+	/** 
+	* Les 2 joueurs
+	*/
+	private Joueur joueur1;
+	private Joueur joueur2;
+
+
 	/**
 	* Constructeur sans paramètre. La valeur par defaut (3) sera utilisée pour les dimensions de la grille.
 	*/
@@ -46,6 +53,9 @@ public class Morpion {
 	* Méthode privée gérant l'instanciation de la classe
 	*/
 	private void _morpion(int dimension) {
+		
+		joueur1 = new Joueur('X');
+		joueur2 = new Joueur('O');
 		
 		if(dimension == 0)
 			grille = new Grille();
