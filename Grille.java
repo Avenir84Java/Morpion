@@ -1,19 +1,9 @@
-TESTTESTTEST
-TEST2_TEST2_TEST2_IGOR
-
-
 import java.lang.StringBuilder;
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 import java.lang.Math;
-<<<<<<< HEAD
 
-// samia's comments
-
-=======
-MODIF PHILIPPE
->>>>>>> a7793e201c2203680fe29463cc8fc69b77520f73
 public class Grille {
 	private final int DIMENSION_DEFAUT = 3;
 	private int DIMENSION_CUSTOM = -1;
@@ -46,7 +36,6 @@ public class Grille {
 	private void _grille(int dimension) {
 		System.out.println("constructeur grille");
 		grille = new Point[(int)Math.pow(dimension,2)];					  
-		//System.out.println(this.toString());
 	}
 
 	/**
@@ -290,7 +279,6 @@ public class Grille {
 		
 		Point point = new Point(coordinateX, coordinateY, this.getValueForPoint());
 		grille[point.getCoordX()+(point.getCoordY()*this.getDimension())]=point;
-		//return point;
 		
 	}
 	
@@ -305,6 +293,5 @@ public class Grille {
 		
 		return makeYourChoisePlayer;
 	}
-// c'est l'heure!!!
 
 }
