@@ -4,8 +4,6 @@ import java.util.Random;
 import java.util.Scanner;
 import java.lang.Math;
 
-
-
 public class Grille {
 	private final int DIMENSION_DEFAUT = 3;
 	private int DIMENSION_CUSTOM = -1;
@@ -38,7 +36,6 @@ public class Grille {
 	private void _grille(int dimension) {
 		System.out.println("constructeur grille");
 		grille = new Point[(int)Math.pow(dimension,2)];					  
-		//System.out.println(this.toString());
 	}
 
 	/**
@@ -51,17 +48,19 @@ public class Grille {
 		for (int i = 0; i<dimension; i++) {
 
 			System.out.println();
-			
+			/*
 			// verif ligne
 			for (int j = i * dimension; j< (i+1)*dimension;j++){
 				if ( j != i * dimension){
 					String car1 = new String((grille[j]==null?Integer.toString(j):grille[j].getValue()));
 					String car2 = new String((grille[j-1]==null?Integer.toString(j-1):grille[j-1].getValue())); 
+					
 					if (!car1.equals(car2)){
 					   break; 
 					}
-					if (j == (i+1)*dimension-1){
 					
+					if (j == (i+1)*dimension-1){
+						
 						if (car1.equals("X")){
 							
 							return "X";
@@ -75,16 +74,17 @@ public class Grille {
 					}  
 				}
 			}
-			
-			// verif colone
+			*/
+			// verif colonne
 
 			for (int j = i ; j< dimension*dimension;j+=dimension) {
-				
+				System.out.println("i:" + i + " j:" + j);
 				if ( j != i){	
 					
 					 String car1 = new String((grille[j]==null?Integer.toString(j):grille[j].getValue()));	
-					 String car2 = new String((grille[j-1]==null?Integer.toString(j-1):grille[j-dimension].getValue())); 
-					 if (car1.equals(car2)){
+					 String car2 = new String((grille[j-dimension]==null?Integer.toString(j-dimension):grille[j-dimension].getValue())); 
+					System.out.println(car1 + " " + car2);
+					 if (!car1.equals(car2)){
 					    break; 
 					 }
 
@@ -103,7 +103,7 @@ public class Grille {
 			}
 					
 		}
-		
+/*		
 		// verif diagonale
 		for (int j=0; j<dimension*dimension;j+=(dimension+1)) {
 			if (j!=0) {
@@ -144,7 +144,7 @@ public class Grille {
 				
 		}
 		
-		return null;
+*/		return null;
 
 	}
 
@@ -282,7 +282,6 @@ public class Grille {
 		
 		Point point = new Point(coordinateX, coordinateY, this.getValueForPoint());
 		grille[point.getCoordX()+(point.getCoordY()*this.getDimension())]=point;
-		//return point;
 		
 	}
 	
@@ -297,6 +296,5 @@ public class Grille {
 		
 		return makeYourChoisePlayer;
 	}
-// c'est l'heure!!!
 
 }

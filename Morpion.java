@@ -67,16 +67,18 @@ public class Morpion {
 	private void run() {
 		notifier("Démarrage du jeu");
 	
-
-		while (true) {
+		String resultat;
+		while ((resultat = grille.verif()) == null) {
 			
 			//Point p = validateCoordinatesAndCreatePoint(grille);
 			//grille.getGrille()[p.getCoordX()+(p.getCoordY()*grille.getDimension())]=p;
 			grille.validateCoordinatesAndCreatePoint();
 			System.out.println(grille.toString());
-			grille.verif();		
+			System.out.println(resultat);		
 			
 		}
+		System.out.println(grille.verif());
+		System.exit(0);
 	}
 	
 	
