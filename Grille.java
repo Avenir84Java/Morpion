@@ -1,19 +1,11 @@
-TESTTESTTEST
-TEST2_TEST2_TEST2_IGOR
-
-
 import java.lang.StringBuilder;
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 import java.lang.Math;
-<<<<<<< HEAD
 
-// samia's comments
 
-=======
-MODIF PHILIPPE
->>>>>>> a7793e201c2203680fe29463cc8fc69b77520f73
+
 public class Grille {
 	private final int DIMENSION_DEFAUT = 3;
 	private int DIMENSION_CUSTOM = -1;
