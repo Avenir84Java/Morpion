@@ -18,7 +18,7 @@ public class Morpion {
 	/**
 	* Boolean qui indique si il faut afficher les message de debug dans la console. Peut être indiqué sur la ligne de commande
 	*/
-	private static boolean debug;
+	public static boolean debug;
 	
 	/**
 	* La grille de jeu
